@@ -28,7 +28,7 @@ if (!function_exists('Somnium\Core\timestamp_micro')) {
      */
     function timestamp_micro(string $microtime = null): string
     {
-        if (!$microtime) {
+        if (is_null($microtime)) {
             $microtime = microtime();
         }
 
