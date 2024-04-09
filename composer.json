@@ -1,6 +1,5 @@
 {
     "name": "somnium-php/framework",
-    "version": "1.0.0",
     "description": "The Somnium PHP Framework",
     "keywords": [
         "framework",
