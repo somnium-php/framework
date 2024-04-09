@@ -20,12 +20,17 @@
         }
     ],
     "require": {
-        "php": "^8.3"
+        "php": "^8.3",
+        "ext-bcmath": "*"
     },
     "autoload": {
         "psr-4": {
             "Somnium\\": "src/"
-        }
+        },
+        "files": [
+            "src/Core/functions.php",
+            "src/helpers.php"
+        ]
     },
     "config": {
         "optimize-autoloader": false,
