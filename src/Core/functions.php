@@ -8,12 +8,12 @@ if (!function_exists('Somnium\Core\join_paths')) {
      */
     function join_paths(string $parent, string ...$children): string
     {
-        $path = rtrim($parent, '\/');
+        $path = rtrim($parent, DIRECTORY_SEPARATOR);
 
         foreach ($children as $child) {
-            $child = trim($child, '\/');
+            $child = trim($child, DIRECTORY_SEPARATOR);
 
-            if ($child) {
+            if (!empty($child)) {
                 $path .= DIRECTORY_SEPARATOR . $child;
             }
         }
