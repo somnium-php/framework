@@ -33,7 +33,7 @@ trait HandlesPaths
 
         $this->rootPath = rtrim(
             realpath($path),
-            '\/'
+            DIRECTORY_SEPARATOR
         );
 
         $this->setAdditionalPaths();
