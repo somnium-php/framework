@@ -12,16 +12,6 @@ if (!function_exists('app')) {
     }
 }
 
-if (!function_exists('app_version')) {
-    /**
-     * Gets the Somnium PHP Framework version
-     */
-    function app_version(): string
-    {
-        return Application::VERSION;
-    }
-}
-
 if (!function_exists('public_path')) {
     /**
      * Gets the path of the application's public directory
@@ -52,5 +42,15 @@ if (!function_exists('runtime')) {
     {
         return Application::instance()
             ->runtime();
+    }
+}
+
+if (!function_exists('version')) {
+    /**
+     * Gets the Somnium PHP Framework version
+     */
+    function version(): string
+    {
+        return Application::VERSION;
     }
 }
