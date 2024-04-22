@@ -30,7 +30,7 @@ trait HandlesPaths
     {
         if (!is_dir($path)) {
             throw new Exception(
-                "Application root path \"$path\" does not exist!"
+                "Application root path [$path] does not exist!"
             );
         }
 
