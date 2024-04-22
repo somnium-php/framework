@@ -21,6 +21,9 @@ trait HandlesPaths
     /**
      * Sets the root path of the application
      *
+     * This function also sets additional application-managed paths based on the
+     * root path provided.
+     *
      * @throws Exception
      */
     protected function setRootPath(string $path): void
@@ -40,7 +43,7 @@ trait HandlesPaths
     }
 
     /**
-     * Sets additional application paths automatically
+     * Sets additional application-managed paths
      */
     protected function setAdditionalPaths(): void
     {
@@ -49,6 +52,9 @@ trait HandlesPaths
 
     /**
      * Gets the root path of the application
+     *
+     * Each optional path string provided in ...$paths is merged with the root
+     * path using OS-aware directory separators.
      */
     public function rootPath(string ...$paths): string
     {
@@ -57,6 +63,9 @@ trait HandlesPaths
 
     /**
      * Gets the path of the application's public directory
+     *
+     * Each optional path string provided in ...$paths is merged with the public
+     * path using OS-aware directory separators.
      */
     public function publicPath(string ...$paths): string
     {

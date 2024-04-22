@@ -67,6 +67,8 @@ class Application
 
     /**
      * Gets the start time of the application request
+     *
+     * The return value is a UNIX timestamp with microseconds.
      */
     public function startedAt(): string
     {
@@ -75,6 +77,8 @@ class Application
 
     /**
      * Gets the current application request runtime
+     *
+     * The return value is a UNIX timestamp with microseconds.
      */
     public function runtime(): string
     {

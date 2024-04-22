@@ -15,6 +15,9 @@ if (!function_exists('app')) {
 if (!function_exists('public_path')) {
     /**
      * Gets the path of the application's public directory
+     *
+     * Each optional path string provided in ...$paths is merged with the public
+     * path using OS-aware directory separators.
      */
     function public_path(string ...$paths): string
     {
@@ -26,6 +29,9 @@ if (!function_exists('public_path')) {
 if (!function_exists('root_path')) {
     /**
      * Gets the root path of the application
+     *
+     * Each optional path string provided in ...$paths is merged with the root
+     * path using OS-aware directory separators.
      */
     function root_path(string ...$paths): string
     {
@@ -37,6 +43,8 @@ if (!function_exists('root_path')) {
 if (!function_exists('runtime')) {
     /**
      * Gets the current application request runtime
+     *
+     * The return value is a UNIX timestamp with microseconds.
      */
     function runtime(): string
     {
