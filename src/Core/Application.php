@@ -30,6 +30,22 @@ class Application
     protected string $startedAt;
 
     /**
+     * Retrieves the server request start time
+     *
+     * The return value is a UNIX timestamp with microseconds.
+     */
+    protected function serverRequestStartedAt(): string
+    {
+        $precision = ini_set('precision', 16);
+
+        $startedAt = (string) $_SERVER['REQUEST_TIME_FLOAT'];
+
+        ini_set('precision', $precision);
+
+        return $startedAt;
+    }
+
+    /**
      * Creates a new class instance
      */
     public function __construct(string $rootPath)
@@ -38,7 +54,7 @@ class Application
 
         $this->isConsole = (PHP_SAPI === 'cli');
 
-        $this->startedAt = timestamp_micro(SOMNIUM_START);
+        $this->startedAt = $this->serverRequestStartedAt();
 
         $this->setRootPath($rootPath);
     }
