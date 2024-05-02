@@ -3,6 +3,7 @@
 namespace Somnium\Core\Concerns;
 
 use Exception;
+use Somnium\Core\Exceptions\PathNotFoundException;
 
 use function Somnium\Core\join_paths;
 
@@ -29,9 +30,7 @@ trait HandlesPaths
     protected function setRootPath(string $path): void
     {
         if (!is_dir($path)) {
-            throw new Exception(
-                "Application root path [$path] does not exist!"
-            );
+            throw new PathNotFoundException($path, 'application root path');
         }
 
         $this->rootPath = rtrim(
