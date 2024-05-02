@@ -5,6 +5,8 @@ use Somnium\Core\Application;
 if (!function_exists('app')) {
     /**
      * Gets the current application instance
+     *
+     * @throws Exception
      */
     function app(): Application
     {
@@ -28,6 +30,8 @@ if (!function_exists('public_path')) {
      *
      * Each optional path string provided in ...$paths is merged with the public
      * path using OS-aware directory separators.
+     *
+     * @throws Exception
      */
     function public_path(string ...$paths): string
     {
@@ -42,6 +46,8 @@ if (!function_exists('root_path')) {
      *
      * Each optional path string provided in ...$paths is merged with the root
      * path using OS-aware directory separators.
+     *
+     * @throws Exception
      */
     function root_path(string ...$paths): string
     {
@@ -55,6 +61,8 @@ if (!function_exists('runtime')) {
      * Gets the current application request runtime
      *
      * The return value is a UNIX timestamp with microseconds.
+     *
+     * @throws Exception
      */
     function runtime(): string
     {

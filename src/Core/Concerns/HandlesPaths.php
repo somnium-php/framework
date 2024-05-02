@@ -2,7 +2,6 @@
 
 namespace Somnium\Core\Concerns;
 
-use Exception;
 use Somnium\Core\Exceptions\PathNotFoundException;
 
 use function Somnium\Core\join_paths;
@@ -25,7 +24,7 @@ trait HandlesPaths
      * This function also sets additional application-managed paths based on the
      * root path provided.
      *
-     * @throws Exception
+     * @throws PathNotFoundException
      */
     protected function setRootPath(string $path): void
     {

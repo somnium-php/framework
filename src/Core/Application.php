@@ -4,6 +4,7 @@ namespace Somnium\Core;
 
 use Exception;
 use Somnium\Core\Concerns\HandlesPaths;
+use Somnium\Core\Exceptions\PathNotFoundException;
 
 class Application
 {
@@ -47,6 +48,8 @@ class Application
 
     /**
      * Creates a new class instance
+     *
+     * @throws PathNotFoundException
      */
     public function __construct(string $rootPath)
     {
