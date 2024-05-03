@@ -1,6 +1,6 @@
 <?php
 
-namespace Somnium\Core\Exceptions;
+namespace Somnium\Exceptions;
 
 use Exception;
 use Throwable;

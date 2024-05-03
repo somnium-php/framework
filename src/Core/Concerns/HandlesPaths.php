@@ -2,7 +2,7 @@
 
 namespace Somnium\Core\Concerns;
 
-use Somnium\Core\Exceptions\PathNotFoundException;
+use Somnium\Exceptions\PathNotFoundException;
 
 use function Somnium\Core\join_paths;
 

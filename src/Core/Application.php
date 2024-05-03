@@ -4,7 +4,7 @@ namespace Somnium\Core;
 
 use Exception;
 use Somnium\Core\Concerns\HandlesPaths;
-use Somnium\Core\Exceptions\PathNotFoundException;
+use Somnium\Exceptions\PathNotFoundException;
 
 class Application
 {
