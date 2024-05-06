@@ -6,7 +6,7 @@ use Somnium\Exceptions\PathNotFoundException;
 
 use function Somnium\Core\join_paths;
 
-trait HandlesPaths
+trait ConfiguresPaths
 {
     /**
      * The root path of the application

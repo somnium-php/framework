@@ -3,12 +3,12 @@
 namespace Somnium\Core;
 
 use Exception;
-use Somnium\Core\Concerns\HandlesPaths;
+use Somnium\Core\Concerns\ConfiguresPaths;
 use Somnium\Exceptions\PathNotFoundException;
 
 class Application
 {
-    use HandlesPaths;
+    use ConfiguresPaths;
 
     /**
      * The Somnium PHP Framework version
