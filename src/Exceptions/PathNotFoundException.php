@@ -12,7 +12,7 @@ class PathNotFoundException extends Exception
      */
     public function __construct(
         string $path,
-        string $description,
+        string $description = 'path',
         Throwable $previous = null
     ) {
         parent::__construct(
