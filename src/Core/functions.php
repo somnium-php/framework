@@ -25,6 +25,9 @@ if (!function_exists('Somnium\Core\join_paths')) {
 if (!function_exists('Somnium\Core\timestamp_micro')) {
     /**
      * Gets the current UNIX timestamp with microseconds
+     *
+     * If $microtime is provided - from a call to microtime(false) - this
+     * function formats and returns that value instead.
      */
     function timestamp_micro(string $microtime = null): string
     {

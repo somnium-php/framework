@@ -27,11 +27,13 @@ class Application
 
     /**
      * The start time of the application request
+     *
+     * The stored value is a UNIX timestamp with microseconds.
      */
     protected string $startedAt;
 
     /**
-     * Retrieves the server request start time
+     * Gets the server request start time
      *
      * The return value is a UNIX timestamp with microseconds.
      */
